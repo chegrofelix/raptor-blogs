@@ -1,0 +1,12 @@
+{% include 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
+
+<div class="container">
+    <h2 style="font-weight: 400;">{{ legend }}</h2>
+   <br>
+    {{wtf.quick_form(form)}}
+    {{simplemde.load}}
+</div>
+{% endblock %}
