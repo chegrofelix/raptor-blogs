@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:ragnarok@localhost/blog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:ragnarok@localhost/moringa'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     QUOTES_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     SECRET_KEY = 'Ethylenediaminetetraaceticacid'
@@ -16,7 +16,8 @@ class Config:
     DEBUG = True
 
 class ProdConfig(Config):
-  SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+     pass
     
      
 class TestConfig(Config):
@@ -24,7 +25,6 @@ class TestConfig(Config):
     pass
 
 class DevConfig(Config):
-    #SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:ragnarok@localhost/blog'
 
     DEBUG = True
 

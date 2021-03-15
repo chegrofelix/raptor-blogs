@@ -8,11 +8,13 @@ from flask_mail import Mail
 from flask_simplemde import SimpleMDE
 from werkzeug.utils import secure_filename
 
-bootstrap = Bootstrap()
-db = SQLAlchemy()
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
+
+
+bootstrap = Bootstrap()
+db = SQLAlchemy()
 photos = UploadSet('photos', IMAGES)
 mail = Mail()
 simple = SimpleMDE()
